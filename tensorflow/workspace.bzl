@@ -760,7 +760,7 @@ def tf_workspace(path_prefix="", tf_repo_name=""):
   # at build time. https://github.com/grpc/grpc/issues/13590
   native.bind(
       name = "grpc_lib",
-      actual = "@grpc//:grpc++_unsecure",
+      actual = "@grpc//:grpc++",
   )
 
   # Needed by gRPC

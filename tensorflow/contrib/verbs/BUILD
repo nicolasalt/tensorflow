@@ -70,7 +70,7 @@ cc_library(
         "//tensorflow/core/distributed_runtime/rpc:async_service_interface",
         "//tensorflow/core/distributed_runtime/rpc:grpc_call",
         "//tensorflow/core/distributed_runtime/rpc:grpc_util",
-        "@grpc//:grpc++_unsecure",
+        "@grpc//:grpc++",
     ],
     alwayslink = 1,
 )
@@ -81,7 +81,7 @@ cc_library(
     hdrs = ["grpc_verbs_service_impl.h"],
     deps = [
         ":verbs_service_proto_cc",
-        "@grpc//:grpc++_unsecure",
+        "@grpc//:grpc++",
     ],
 )
 
