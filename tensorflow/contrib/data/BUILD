@@ -29,7 +29,10 @@ py_library(
 tf_custom_op_library(
     name = "_prefetching_ops.so",
     srcs = ["ops/prefetching_ops.cc"],
-    deps = ["//tensorflow/contrib/data/kernels:prefetching_kernels"],
+    deps = [
+        "//tensorflow/contrib/data/kernels:prefetching_kernels",
+        "@protobuf_archive//:protobuf",
+    ],
 )
 
 tf_gen_op_libs(
